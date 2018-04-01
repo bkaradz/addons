@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- This will display x_stitches in on both the sales order list and form view  -->
+        <record id="view_product_category_related_sale_line" model="ir.ui.view">
+            <field name="name">view.product.category.related.sale.line</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//notebook//page//field//form//field[@name='price_unit']" position="before">
+                    <field name="x_stitches"/>
+                </xpath>
+                <xpath expr="//notebook//page//field//tree//field[@name='price_unit']" position="before">
+                    <field name="x_stitches"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

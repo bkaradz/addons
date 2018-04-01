@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit Form View (base.view_partner_form) to add (x_vat) to it -->
+    <record id="base_view_partner_form" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='fax']" position="after">
+                <!-- Added x_vat fields after the fax field -->
+                <field name="x_vat"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
