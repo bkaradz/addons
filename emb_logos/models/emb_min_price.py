@@ -9,3 +9,5 @@ class ProductPricelistItemModule(models.Model):
 class ProductPricelistModule(models.Model):
     _inherit = 'product.pricelist'
 
+    emb_price_max_unit = fields.Float(string="Max Price/1000st", required=False, )
+

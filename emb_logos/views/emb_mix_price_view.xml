@@ -1,28 +1,14 @@
 <odoo>
     <data>
          <!-- Adds Minimum Price on the Pricelist form view -->
-        <record id="product_product_pricelist_item_form_view" model="ir.ui.view">
-            <field name="model">product.pricelist.item</field>
-            <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
-            <field name="arch" type="xml">
-
-                <xpath expr="//field[@name='price_max_margin']" position="after">
-                    <!-- Added emb_min_price fields after the price_max_margin field -->
-                    <field name="emb_min_price"/>
-                </xpath>
-
-            </field>
-        </record>
-
-        <!-- Adds Minimum Price on the Pricelist list view -->
-        <record id="product_product_pricelist_view" model="ir.ui.view">
+        <record id="products_product_pricelist_view" model="ir.ui.view">
             <field name="model">product.pricelist</field>
             <field name="inherit_id" ref="product.product_pricelist_view"/>
             <field name="arch" type="xml">
 
-                <xpath expr="//field[@name='price']" position="after">
-                    <!-- Added emb_min_price fields after the price field -->
-                    <field name="emb_min_price"/>
+                <xpath expr="//field[@name='country_group_ids']" position="after">
+                    <!-- Added emb_max_price fields after the price_max_margin field -->
+                    <field name="emb_price_max_unit"/>
                 </xpath>
 
             </field>

@@ -7,6 +7,7 @@
     'company': 'Natural Link Investments',
     'category': 'Products',
     'depends': ['base','product', 'sale'],
-    'data': ['views/emb_view.xml','views/emb_product_view.xml','views/emb_search_view.xml','views/emb_min_price_view.xml'],
+    'data': ['views/emb_view.xml','views/emb_product_view.xml','views/emb_search_view.xml','views/emb_min_price_view.xml',
+            'views/emb_mix_price_view.xml',],
     'installable': True,
 }
